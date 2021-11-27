@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusla\\source\\repos\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
+      "projectUniqueName": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
       "projectName": "CharacterRedactor",
-      "projectPath": "C:\\Users\\rusla\\source\\repos\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
+      "projectPath": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
       "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusla\\source\\repos\\CharacterRedactor\\CharacterRedactor\\obj\\",
+      "outputPath": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",

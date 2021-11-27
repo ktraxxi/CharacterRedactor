@@ -98,7 +98,7 @@ namespace CharacterRedactor
             }
         }
 
-        
+        private int MaxMana = 200;
         public int MinMana { get; set; } = 100;
         private int _mana;
 
@@ -112,6 +112,10 @@ namespace CharacterRedactor
                 {
                     _mana = MinMana;
                 }
+                else if (value > MaxMana)
+                {
+                    _mana = MaxMana;
+                }
                 else
                 {
                     _mana = value;
@@ -119,14 +123,10 @@ namespace CharacterRedactor
             }
         }
 
-        
-        public Mage(string name, int damage, double castTime, int health, int mana)
+
+        public Mage()
         {
-            Name = name;
-            Damage = damage;
-            CastTime = castTime;
-            Health = health;
-            Mana = mana;
+
         }
         public Mage(string DefaultName, int MaxTalentPoints, int MinDamage, double MaxCastTime, int MinHealth, int MinMana)
         {

@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CharacterRedactor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.485,0.493">
-        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="474,117,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="635,230,0,0" VerticalAlignment="Top" Height="170" Width="128"/>
-        <ListBox Margin="451,230,226,34"/>
-        <Button x:Name="minus_health" Content="-" HorizontalAlignment="Left" Margin="128,115,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="plus_health" Content="+" HorizontalAlignment="Left" Margin="311,115,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="minus_resource" Content="-" HorizontalAlignment="Left" Margin="128,230,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="plus_resource" Content="+" HorizontalAlignment="Left" Margin="311,230,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="minus_attackspeed" Content="-" HorizontalAlignment="Left" Margin="128,189,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="plus_attackspeed" Content="+" HorizontalAlignment="Left" Margin="311,189,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="minus_damage1" Content="-" HorizontalAlignment="Left" Margin="128,154,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button x:Name="plus_damage" Content="+" HorizontalAlignment="Left" Margin="311,154,0,0" VerticalAlignment="Top" Height="20" Width="20"/>
-        <Button Content="Create char" HorizontalAlignment="Left" Margin="474,189,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click"/>
-        <Label x:Name="health_label" Content="Label" HorizontalAlignment="Left" Margin="168,112,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="168,156,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="168,191,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="168,230,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="474,151,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="302,46,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="description_label" Content="Character Stats" HorizontalAlignment="Left" Margin="418,169,0,0" VerticalAlignment="Top" Height="239" Width="346"/>
+        <ListBox Margin="53,228,554,42"/>
+        <Button x:Name="minus_health" Content="-" HorizontalAlignment="Left" Margin="43,44,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_health_Click"/>
+        <Button x:Name="plus_health" Content="+" HorizontalAlignment="Left" Margin="226,44,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_health_Click"/>
+        <Button x:Name="minus_resource" Content="-" HorizontalAlignment="Left" Margin="43,159,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_resource_Click"/>
+        <Button x:Name="plus_resource" Content="+" HorizontalAlignment="Left" Margin="226,159,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_resource_Click"/>
+        <Button x:Name="minus_attackspeed" Content="-" HorizontalAlignment="Left" Margin="43,118,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_attackspeed_Click"/>
+        <Button x:Name="plus_attackspeed" Content="+" HorizontalAlignment="Left" Margin="226,118,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_attackspeed_Click"/>
+        <Button x:Name="minus_damage1" Content="-" HorizontalAlignment="Left" Margin="43,83,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_damage1_Click"/>
+        <Button x:Name="plus_damage" Content="+" HorizontalAlignment="Left" Margin="226,83,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_damage_Click"/>
+        <Button Content="Create char" HorizontalAlignment="Left" Margin="302,118,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="health_label" Content="Health" HorizontalAlignment="Left" Margin="83,41,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
+        <Label x:Name="damage_label" Content="Damage" HorizontalAlignment="Left" Margin="83,85,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="casttime_label" Content="Cast time" HorizontalAlignment="Left" Margin="83,120,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="mana_label" Content="Mana" HorizontalAlignment="Left" Margin="83,159,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="talents_label" Content="Talent points" HorizontalAlignment="Left" Margin="302,80,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
