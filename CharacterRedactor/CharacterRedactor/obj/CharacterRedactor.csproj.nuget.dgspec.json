@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj": {}
+    "C:\\Users\\01\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj": {
+    "C:\\Users\\01\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
+        "projectUniqueName": "C:\\Users\\01\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
         "projectName": "CharacterRedactor",
-        "projectPath": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
-        "packagesPath": "C:\\Users\\rusla\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rusla\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\obj\\",
+        "projectPath": "C:\\Users\\01\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor.csproj",
+        "packagesPath": "C:\\Users\\01\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\01\\Desktop\\CharacterRedactor\\CharacterRedactor\\CharacterRedactor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rusla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\01\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

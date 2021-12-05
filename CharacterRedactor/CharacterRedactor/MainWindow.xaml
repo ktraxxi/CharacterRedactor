@@ -7,23 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.485,0.493">
-        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="302,46,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="description_label" Content="Character Stats" HorizontalAlignment="Left" Margin="418,169,0,0" VerticalAlignment="Top" Height="239" Width="346"/>
-        <ListBox Margin="53,228,554,42"/>
-        <Button x:Name="minus_health" Content="-" HorizontalAlignment="Left" Margin="43,44,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_health_Click"/>
-        <Button x:Name="plus_health" Content="+" HorizontalAlignment="Left" Margin="226,44,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_health_Click"/>
-        <Button x:Name="minus_resource" Content="-" HorizontalAlignment="Left" Margin="43,159,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_resource_Click"/>
-        <Button x:Name="plus_resource" Content="+" HorizontalAlignment="Left" Margin="226,159,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_resource_Click"/>
-        <Button x:Name="minus_attackspeed" Content="-" HorizontalAlignment="Left" Margin="43,118,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_attackspeed_Click"/>
-        <Button x:Name="plus_attackspeed" Content="+" HorizontalAlignment="Left" Margin="226,118,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_attackspeed_Click"/>
-        <Button x:Name="minus_damage1" Content="-" HorizontalAlignment="Left" Margin="43,83,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="minus_damage1_Click"/>
-        <Button x:Name="plus_damage" Content="+" HorizontalAlignment="Left" Margin="226,83,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="plus_damage_Click"/>
-        <Button Content="Create char" HorizontalAlignment="Left" Margin="302,118,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="health_label" Content="Health" HorizontalAlignment="Left" Margin="83,41,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Label x:Name="damage_label" Content="Damage" HorizontalAlignment="Left" Margin="83,85,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="casttime_label" Content="Cast time" HorizontalAlignment="Left" Margin="83,120,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="mana_label" Content="Mana" HorizontalAlignment="Left" Margin="83,159,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="talents_label" Content="Talent points" HorizontalAlignment="Left" Margin="302,80,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="670,20,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="main_label" Content="Character Stats" HorizontalAlignment="Left" Margin="400,272,0,0" VerticalAlignment="Top" Height="152" Width="364"/>
+        <Button Content="Create char" HorizontalAlignment="Left" Margin="670,92,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="strength_label" Content="Strength" HorizontalAlignment="Left" Margin="58,11,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
+        <Label x:Name="dexterity_label" Content="Dexterity" HorizontalAlignment="Left" Margin="58,55,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="intel_label" Content="Intelligence" HorizontalAlignment="Left" Margin="58,90,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="const_label" Content="Constitution" HorizontalAlignment="Left" Margin="58,129,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="talents_label" Content="Talent points" HorizontalAlignment="Left" Margin="670,54,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="PAttack_label" Content="Phys attack" HorizontalAlignment="Left" Margin="272,15,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
+        <Label x:Name="CritPAttack_label" Content="Crit Phys attack" HorizontalAlignment="Left" Margin="272,59,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="MAttack_label" Content="Magical Attack" HorizontalAlignment="Left" Margin="272,94,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="PDef_label" Content="Phys Defence" HorizontalAlignment="Left" Margin="272,133,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="health_label" Content="Health" HorizontalAlignment="Left" Margin="493,13,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
+        <Label x:Name="CritChance_label" Content="Crit Chance" HorizontalAlignment="Left" Margin="272,195,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="CritBonus_label" Content="Crit Bonus" HorizontalAlignment="Left" Margin="272,230,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="MDef_label" Content="Magical Defence" HorizontalAlignment="Left" Margin="272,164,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label x:Name="mana_label" Content="Mana" HorizontalAlignment="Left" Margin="493,46,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
+        <Button Content="+strength" HorizontalAlignment="Left" Margin="102,322,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="-strength" HorizontalAlignment="Left" Margin="178,322,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

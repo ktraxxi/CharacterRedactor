@@ -4,138 +4,174 @@ using System.Text;
 
 namespace CharacterRedactor
 {
-    class Mage 
+    class Mage : ICharacter
     {
-        public string DefaultName { get; set; } = "New Mage";
-        private string _name;
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
+        public string Name { get; set; } = "New Mage";
 
-        private int _minTalentPoints = 0;
-        public int MaxTalentPoints { get; set; } = 60;
-        private int _talentPoints;
-        public int TalentPoints
+        private int _strength = 15;
+        public int Strength     
         {
-            get { return _talentPoints; }
+            get { return _strength; }
             set 
             {
-                if (value < _minTalentPoints)
+                if (value < 15)
                 {
-                    _talentPoints = _minTalentPoints;
+                    _strength = 15;
                 }
-                else if (value > MaxTalentPoints)
+                else if (value > 45)
                 {
-                    _talentPoints = MaxTalentPoints;
+                    _strength = 45;
                 }
                 else
                 {
-                    _talentPoints = value;
+                    _strength = value;
+                }
+            }
+        }
+        private int _dexterity = 20;
+
+        public int Dexterity
+        {
+            get { return _dexterity; }
+            set 
+            {
+                if (value < 20)
+                {
+                    _dexterity = 20;
+                }
+                else if (value > 70)
+                {
+                    _dexterity = 70;
+                }
+                else
+                {
+                    _dexterity = value;
+                }
+            }
+        }
+        private int _intelligence = 35;
+
+        public int Intelligence
+        {
+            get { return _intelligence; }
+            set 
+            {
+                if (value < 35)
+                {
+                    _intelligence = 35;
+                }
+                else if (value > 250)
+                {
+                    _intelligence = 250;
+                }
+                else
+                {
+                    _intelligence = value;
+                }
+            }
+        }
+        private int _constitution = 15;
+
+        public int Constitution
+        {
+            get { return _constitution; }
+            set 
+            {
+                if (value < 15)
+                {
+                    _constitution = 15;
+                }
+                else if (value > 70)
+                {
+                    _constitution = 70;
+                }
+                else
+                {
+                    _constitution = value;
                 }
             }
         }
 
-       
-        public int MinDamage { get; set; } = 10;
-        private int _damage;
-        public int Damage
-        {
-            get { return _damage; }
-            set 
-            {
-                if (value < MinDamage)
-                {
-                    _damage = MinDamage;
-                }
-                else
-                {
-                    _damage = value;
-                }
-            }
-        }
+        public int Level { get; set; } = 1;
 
-        private double _minCastTime = 1.0;
-        public double MaxCastTime { get; set; } = 4.0;
-        private double _castTime;
-        public double CastTime
-        {
-            get { return _castTime; }
-            set 
-            {
-                if (value < _minCastTime)
-                {
-                    _castTime = _minCastTime;
-                }
-                else if (value > MaxCastTime)
-                {
-                    _castTime = MaxCastTime;
-                }
-                else
-                {
-                    _castTime = value;
-                }
-            }
-        }
+        //private double _health;
+        //public double Health
+        //{
+        //    get { return _health; }
+        //    set 
+        //    { 
+        //        _health = Constitution * 2 + Strength * 0.5;
+        //    }
+        //}
 
+        //private int _mana;
+        //public int Mana
+        //{
+        //    get { return _mana; }
+        //    set 
+        //    {
+        //        _mana = Intelligence * 2; 
+        //    }
+        //}
+
+        public int Experience { get; set; } = 0;
         
-        public int MinHealth { get; set; } = 100;
-        private int _health;
-        public int Health
+        public double CritChance()
         {
-            get { return _health; }
-            set 
-            {
-                if (value < MinHealth)
-                {
-                    _health = MinHealth;
-                }
-                else
-                {
-                    _health = value; 
-                }
-            }
+            return Dexterity * 0.3 + 5;
         }
 
-        private int MaxMana = 200;
-        public int MinMana { get; set; } = 100;
-        private int _mana;
-
-
-        public int Mana
+        public double CritDamage()
         {
-            get { return _mana; }
-            set 
-            {
-                if (value < MinMana)
-                {
-                    _mana = MinMana;
-                }
-                else if (value > MaxMana)
-                {
-                    _mana = MaxMana;
-                }
-                else
-                {
-                    _mana = value;
-                }
-            }
+            return Dexterity * 0.5 + 2;
         }
 
-
-        public Mage()
+        public double CriticalAttack()
         {
-
+            return PhysicalAttack() + CritDamage();
         }
-        public Mage(string DefaultName, int MaxTalentPoints, int MinDamage, double MaxCastTime, int MinHealth, int MinMana)
+
+        public double MagicalAttack()
         {
-            this.DefaultName = DefaultName;
-            this.MaxTalentPoints = MaxTalentPoints;
-            this.MinDamage = MinDamage;
-            this.MaxCastTime = MaxCastTime;
-            this.MinHealth = MinHealth;
-            this.MinMana = MinMana;
+            return Intelligence * 0.3;
+        }
+
+        public double MagicalDefence()
+        {
+            return Intelligence * 0.1;
+        }
+
+        public double PhysicalAttack()
+        {
+            return Strength * 0.5 + Dexterity * 0.2;
+        }
+
+        public double PhysicalDefence()
+        {
+            return Dexterity * 0.2 + Constitution * 0.3;
+        }
+
+        public double Health()
+        {
+            return Constitution * 2 + Strength * 0.5;
+        }
+
+        public int Mana()
+        {
+            return Intelligence * 2;
+        }
+
+        public Mage(string name, int strength, int dexterity, int intelligence, int constitution)
+        {
+            Name = name;
+            Strength = strength;
+            Dexterity = dexterity;
+            Intelligence = intelligence;
+            Constitution = constitution;
+        }
+        public Mage() 
+        {
+
         }
     }
 }
