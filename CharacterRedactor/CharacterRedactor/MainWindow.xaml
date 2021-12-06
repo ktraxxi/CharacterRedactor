@@ -7,25 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.485,0.493">
-        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="670,20,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="main_label" Content="Character Stats" HorizontalAlignment="Left" Margin="400,272,0,0" VerticalAlignment="Top" Height="152" Width="364"/>
-        <Button Content="Create char" HorizontalAlignment="Left" Margin="670,92,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="strength_label" Content="Strength" HorizontalAlignment="Left" Margin="58,11,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Label x:Name="dexterity_label" Content="Dexterity" HorizontalAlignment="Left" Margin="58,55,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="intel_label" Content="Intelligence" HorizontalAlignment="Left" Margin="58,90,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="const_label" Content="Constitution" HorizontalAlignment="Left" Margin="58,129,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="talents_label" Content="Talent points" HorizontalAlignment="Left" Margin="670,54,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="PAttack_label" Content="Phys attack" HorizontalAlignment="Left" Margin="272,15,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Label x:Name="CritPAttack_label" Content="Crit Phys attack" HorizontalAlignment="Left" Margin="272,59,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="MAttack_label" Content="Magical Attack" HorizontalAlignment="Left" Margin="272,94,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="PDef_label" Content="Phys Defence" HorizontalAlignment="Left" Margin="272,133,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="health_label" Content="Health" HorizontalAlignment="Left" Margin="493,13,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Label x:Name="CritChance_label" Content="Crit Chance" HorizontalAlignment="Left" Margin="272,195,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="CritBonus_label" Content="Crit Bonus" HorizontalAlignment="Left" Margin="272,230,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="MDef_label" Content="Magical Defence" HorizontalAlignment="Left" Margin="272,164,0,0" VerticalAlignment="Top" Width="128"/>
-        <Label x:Name="mana_label" Content="Mana" HorizontalAlignment="Left" Margin="493,46,0,0" VerticalAlignment="Top" Width="128" Height="27"/>
-        <Button Content="+strength" HorizontalAlignment="Left" Margin="102,322,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="-strength" HorizontalAlignment="Left" Margin="178,322,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <TextBox x:Name="Name_textbox" HorizontalAlignment="Left" Margin="387,17,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="main_label" Content="Character Stats" HorizontalAlignment="Left" VerticalAlignment="Center" Height="434" Width="172"/>
+        <Button x:Name="createCharBtn" Content="Create char" HorizontalAlignment="Left" Margin="387,62,0,0" VerticalAlignment="Top" Width="120" Click="createCharBtn_Click"/>
+        <Button x:Name="plusstr" Content="+strength" HorizontalAlignment="Left" Margin="187,9,0,0" VerticalAlignment="Top" Click="plusstr_Click"/>
+        <Button x:Name="minusstr" Content="-strength" HorizontalAlignment="Left" Margin="279,9,0,0" VerticalAlignment="Top" Click="minusstr_Click"/>
+        <Button x:Name="plusdex" Content="+dexterity" HorizontalAlignment="Left" Margin="187,39,0,0" VerticalAlignment="Top" Click="plusdex_Click"/>
+        <Button x:Name="minusdex" Content="-dexterity" HorizontalAlignment="Left" Margin="279,39,0,0" VerticalAlignment="Top" Click="minusdex_Click"/>
+        <Button x:Name="plusint" Content="+intelligence" HorizontalAlignment="Left" Margin="187,67,0,0" VerticalAlignment="Top" Click="plusint_Click"/>
+        <Button x:Name="minusint" Content="-intelligence" HorizontalAlignment="Left" Margin="279,67,0,0" VerticalAlignment="Top" Click="minusint_Click"/>
+        <Button x:Name="plusconst" Content="+constitution" HorizontalAlignment="Left" Margin="187,97,0,0" VerticalAlignment="Top" Click="plusconst_Click"/>
+        <Button x:Name="minusconst" Content="-constitution" HorizontalAlignment="Left" Margin="279,97,0,0" VerticalAlignment="Top" Click="minusconst_Click"/>
+        <Button x:Name="xp1k" Content="+1K XP" HorizontalAlignment="Left" Margin="187,141,0,0" VerticalAlignment="Top" Click="xp1k_Click"/>
+        <Button x:Name="xp5k" Content="+5K XP" HorizontalAlignment="Left" Margin="250,141,0,0" VerticalAlignment="Top" Click="xp5k_Click"/>
+        <Button x:Name="xp10k" Content="+10K XP" HorizontalAlignment="Left" Margin="315,141,0,0" VerticalAlignment="Top" Click="xp10k_Click"/>
+        <Button x:Name="XPfull" Content="Set full XP" HorizontalAlignment="Left" Margin="387,141,0,0" VerticalAlignment="Top" Click="XPfull_Click"/>
 
     </Grid>
 </Window>

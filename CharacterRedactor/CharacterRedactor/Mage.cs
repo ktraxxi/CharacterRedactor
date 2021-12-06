@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +9,30 @@ namespace CharacterRedactor
 {
     class Mage : ICharacter
     {
+        [BsonId]
+        public ObjectId _id { get; set; }
         public string Name { get; set; } = "New Mage";
+
+        private int _talents = 0;
+        public int Talents
+        {
+            get { return _talents; }
+            set 
+            {
+                if (value < 0)
+                {
+                    _talents = 0;
+                }
+                else if (value > 245)
+                {
+                    _talents = 245;
+                }
+                else
+                {
+                    _talents = value;
+                }
+            }
+        }
 
         private int _strength = 15;
         public int Strength     
@@ -28,8 +54,8 @@ namespace CharacterRedactor
                 }
             }
         }
-        private int _dexterity = 20;
 
+        private int _dexterity = 20;
         public int Dexterity
         {
             get { return _dexterity; }
@@ -49,8 +75,8 @@ namespace CharacterRedactor
                 }
             }
         }
-        private int _intelligence = 35;
 
+        private int _intelligence = 35;
         public int Intelligence
         {
             get { return _intelligence; }
@@ -70,8 +96,8 @@ namespace CharacterRedactor
                 }
             }
         }
-        private int _constitution = 15;
 
+        private int _constitution = 15;
         public int Constitution
         {
             get { return _constitution; }
@@ -92,27 +118,23 @@ namespace CharacterRedactor
             }
         }
 
-        public int Level { get; set; } = 1;
+        private int _level = 1;
+        public int Level
+        {
+            get { return _level; }
+            set 
+            {
+                if (_level > 50)
+                {
+                    _level = 50;
+                }
+                else
+                {
+                    _level = value;
+                }
 
-        //private double _health;
-        //public double Health
-        //{
-        //    get { return _health; }
-        //    set 
-        //    { 
-        //        _health = Constitution * 2 + Strength * 0.5;
-        //    }
-        //}
-
-        //private int _mana;
-        //public int Mana
-        //{
-        //    get { return _mana; }
-        //    set 
-        //    {
-        //        _mana = Intelligence * 2; 
-        //    }
-        //}
+            }
+        }
 
         public int Experience { get; set; } = 0;
         
@@ -155,23 +177,16 @@ namespace CharacterRedactor
         {
             return Constitution * 2 + Strength * 0.5;
         }
-
         public int Mana()
         {
             return Intelligence * 2;
         }
 
-        public Mage(string name, int strength, int dexterity, int intelligence, int constitution)
-        {
-            Name = name;
-            Strength = strength;
-            Dexterity = dexterity;
-            Intelligence = intelligence;
-            Constitution = constitution;
-        }
-        public Mage() 
-        {
+        public Mage() {}
 
-        }
+        //public Mage(string name)
+        //{
+        //    Name = name;
+        //}
     }
 }
